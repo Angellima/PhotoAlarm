@@ -19,7 +19,7 @@
         <span>Test : <%= uploadUrl %></span>
         <form action="<%= uploadUrl %>" method="post" enctype="multipart/form-data">
             <input type="text" name="foo">
-            <input type="file" name="myFile">
+            <input type="file" name="photo">
             <input type="submit" value="Submit">
         </form>
     </body>

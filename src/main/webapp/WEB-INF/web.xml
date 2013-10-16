@@ -35,4 +35,14 @@
 		<url-pattern>/serve</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>generator</servlet-name>
+		<servlet-class>com.sfeir.photoAlarm.UrlGenerator</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>generator</servlet-name>
+		<url-pattern>/generator</url-pattern>
+	</servlet-mapping>
+
 </web-app>

@@ -31,7 +31,7 @@ public class UrlGenerator extends HttpServlet {
 		BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
 		UploadOptions uploadOptions = UploadOptions.Builder.withGoogleStorageBucketName("bucket-photoalarm-sfeir");
 		String uploadUrl = blobstoreService.createUploadUrl("/upload", uploadOptions);
-		    
+		   
 		response.getWriter().write(uploadUrl);
 	}
 
