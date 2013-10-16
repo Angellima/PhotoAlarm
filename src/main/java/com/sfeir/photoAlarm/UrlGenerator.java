@@ -28,18 +28,18 @@ public class UrlGenerator extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
+		UploadOptions uploadOptions = UploadOptions.Builder.withGoogleStorageBucketName("bucket-photoalarm-sfeir");
+		String uploadUrl = blobstoreService.createUploadUrl("/upload", uploadOptions);
+		    
+		response.getWriter().write(uploadUrl);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
-		 UploadOptions uploadOptions = UploadOptions.Builder.withGoogleStorageBucketName("bucket-photoalarm-sfeir");
-		 String uploadUrl = blobstoreService.createUploadUrl("/upload", uploadOptions);
-		    
-		 response.getWriter().write(uploadUrl);
+		 
 	}
 
 }
