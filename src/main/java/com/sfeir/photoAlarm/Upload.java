@@ -26,9 +26,9 @@ public class Upload extends HttpServlet {
 
         if (blobKey == null) {
             res.sendRedirect("/");
-        } else {
+        } /*else {
             res.sendRedirect("/serve?blob-key=" + blobKey.getKeyString());
-        }
+        }*/
         
         UploadOptions uploadOptions = UploadOptions.Builder.withGoogleStorageBucketName("bucket-photoalarm-sfeir");
         String uploadUrl = blobstoreService.createUploadUrl("/on_upload_success", uploadOptions);

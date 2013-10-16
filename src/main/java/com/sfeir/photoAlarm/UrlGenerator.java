@@ -35,11 +35,6 @@ public class UrlGenerator extends HttpServlet {
 		response.getWriter().write(uploadUrl);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 
-	}
+
 
 }
