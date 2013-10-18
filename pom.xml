@@ -5,8 +5,8 @@
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
-    <groupId>com.sfeir.photoAlarm</groupId>
-    <artifactId>com.sfeir.photoalarm</artifactId>
+    <groupId>com.sfeir.poc</groupId>
+    <artifactId>photoalarm-server</artifactId>
 
     <properties>
         <appengine.app.version>1</appengine.app.version>
