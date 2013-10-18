@@ -2,8 +2,6 @@ package com.sfeir.photoAlarm;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -43,7 +41,7 @@ public class ViderCache extends HttpServlet {
 	ServletOutputStream outputStream = response.getOutputStream();
 	try {
 		List<String> result = deleteAll();
-		outputStream.print("<h1>Tous le cache est vider!!!</h1>");
+		outputStream.print("<h1>Le cache a été vidé !</h1>");
 		outputStream.print("<ul>");
 		for (String string : result) {
 			outputStream.print("<li>" + string + "</li>");			
@@ -51,7 +49,7 @@ public class ViderCache extends HttpServlet {
 		outputStream.print("</ul>");
 		
 	} catch (Exception e) {		
-		outputStream.print("<h1 style=\"color : red;\">Erreur : Merci de consulter le code!!!</h1>");
+		outputStream.print("<h1 style=\"color : red;\">Erreur : Merci de consulter le code !</h1>");
 		e.printStackTrace();
 	}
 	}
