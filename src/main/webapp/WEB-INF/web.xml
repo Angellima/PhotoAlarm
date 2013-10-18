@@ -1,48 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
-<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>
-
-	<servlet>
-		<servlet-name>GoogleCloudStorage</servlet-name>
-		<servlet-class>com.sfeir.photoAlarm.GoogleCloudStorageServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>GoogleCloudStorage</servlet-name>
-		<url-pattern>/googlecloudstorage</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>Upload</servlet-name>
-		<servlet-class>com.sfeir.photoAlarm.Upload</servlet-class>
-	</servlet>
-
-	<servlet>
-		<servlet-name>Serve</servlet-name>
-		<servlet-class>com.sfeir.photoAlarm.Serve</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>Upload</servlet-name>
-		<url-pattern>/upload</url-pattern>
-	</servlet-mapping>
-
-	<servlet-mapping>
-		<servlet-name>Serve</servlet-name>
-		<url-pattern>/serve</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>generator</servlet-name>
-		<servlet-class>com.sfeir.photoAlarm.UrlGenerator</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>generator</servlet-name>
-		<url-pattern>/generator</url-pattern>
-	</servlet-mapping>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>GoogleCloudStorage</servlet-name>
+    <servlet-class>com.sfeir.photoAlarm.GoogleCloudStorageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoogleCloudStorage</servlet-name>
+    <url-pattern>/googlecloudstorage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Upload</servlet-name>
+    <servlet-class>com.sfeir.photoAlarm.Upload</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Serve</servlet-name>
+    <servlet-class>com.sfeir.photoAlarm.Serve</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Upload</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Serve</servlet-name>
+    <url-pattern>/serve</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>generator</servlet-name>
+    <servlet-class>com.sfeir.photoAlarm.UrlGenerator</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>generator</servlet-name>
+    <url-pattern>/generator</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViderCache</display-name>
+    <servlet-name>ViderCache</servlet-name>
+    <servlet-class>com.sfeir.photoAlarm.ViderCache</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViderCache</servlet-name>
+    <url-pattern>/ViderCache</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListDataBase</display-name>
+    <servlet-name>ListDataBase</servlet-name>
+    <servlet-class>com.sfeir.photoAlarm.ListDataBase</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListDataBase</servlet-name>
+    <url-pattern>/ListDataBase</url-pattern>
+  </servlet-mapping>
 </web-app>

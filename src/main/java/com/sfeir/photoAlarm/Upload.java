@@ -47,10 +47,10 @@ public class Upload extends HttpServlet {
     public void saveBlobKey(String blobKey){
     	DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
-    	Entity employee = new Entity("Photo");
-    	employee.setProperty("blobKey", blobKey);
-    	employee.setProperty("datePhoto",Calendar.getInstance().getTimeInMillis() );
+    	Entity photo = new Entity("Photo");
+    	photo.setProperty("blobKey", blobKey);
+    	photo.setProperty("datePhoto",Calendar.getInstance().getTimeInMillis() );
 
-    	datastore.put(employee);
+    	datastore.put(photo);
     }
 }
